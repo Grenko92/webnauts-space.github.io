@@ -31,7 +31,6 @@
 }
 body {
   background-image: url(../img/bg-img.png);
-  background-size: 1600px auto;
   color: #212121;
   width: 100%;
   max-width: 1600px;
@@ -93,6 +92,9 @@ body {
   line-height: 19px;
   color: #212121;
 }
+.navigation__link:hover {
+  color: #E00822;
+}
 .navigation__tel {
   text-decoration: none;
   font-family: 'Neue Machina Normal';
@@ -100,6 +102,9 @@ body {
   line-height: 19px;
   margin-right: 74px;
   color: #212121;
+}
+.navigation__tel:hover {
+  color: #E00822;
 }
 .main__start-screen {
   padding-top: 30px;
@@ -198,14 +203,14 @@ body {
   right: 0;
 }
 .services__price {
-  padding-top: 100px;
+  margin-top: 100px;
   display: flex;
 }
 .services__benefits {
-  padding-top: 200px;
+  margin-top: 200px;
 }
 .services__slider {
-  padding-top: 200px;
+  margin-top: 200px;
 }
 .price__service-description {
   width: 380px;
@@ -217,11 +222,36 @@ body {
   display: flex;
   flex-direction: column;
   border: 1px solid #212121;
+  border-bottom: none;
+}
+.price__service-description:last-child {
+  margin-right: 0;
 }
 .price__link-booking {
+  text-decoration: none;
+  color: #212121;
+  display: flex;
+  align-items: center;
   width: 380px;
   height: 90px;
   background-color: #E00822;
+}
+.price__link-booking:hover {
+  color: #E00822;
+}
+.price__link-booking:hover {
+  color: #FFFFFF;
+}
+.price__text-booking {
+  font-family: 'Neue Machina Bold';
+  font-size: 30px;
+  line-height: 29px;
+  font-size: 18px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-right: 37px;
+  margin-left: 75px;
 }
 .service-description__title {
   font-family: 'Neue Machina Normal';
@@ -262,6 +292,7 @@ body {
   margin: 0;
   list-style: none;
   text-decoration: none;
+  margin-bottom: 30px;
 }
 .price-list__item {
   padding-top: 15px;
@@ -271,6 +302,7 @@ body {
 }
 .price-list__item:last-child {
   border-bottom: none;
+  padding-bottom: 0;
 }
 .price-list__price {
   font-family: 'Neue Machina Bold';
@@ -422,6 +454,9 @@ body {
   text-transform: uppercase;
   color: #212121;
 }
+.events-item__link-more:hover {
+  color: #E00822;
+}
 .events-item__cost {
   height: 100%;
   display: flex;
@@ -442,6 +477,9 @@ body {
   line-height: 15px;
   color: #212121;
   display: block;
+}
+.events-item__organizer:hover {
+  color: #E00822;
 }
 .contacts__container {
   display: flex;
@@ -472,9 +510,15 @@ body {
   color: #212121;
   padding-bottom: 13px;
 }
+.contacts__tel:hover {
+  color: #E00822;
+}
 .contacts__mail {
   text-decoration: none;
   color: #212121;
+}
+.contacts__mail:hover {
+  color: #E00822;
 }
 .contacts__img-map {
   max-width: 1600px;
@@ -567,6 +611,9 @@ body {
   margin-bottom: 10px;
   text-align: center;
 }
+.footer__mail:hover {
+  color: #E00822;
+}
 .footer__tel {
   font-family: 'Neue Machina Normal';
   font-size: 16px;
@@ -577,6 +624,9 @@ body {
   margin-bottom: 30px;
   text-align: center;
 }
+.footer__tel:hover {
+  color: #E00822;
+}
 .footer__go-map {
   font-family: 'Neue Machina Normal';
   font-size: 16px;
@@ -586,6 +636,9 @@ body {
   color: #E00822;
   margin-bottom: 30px;
   text-align: center;
+}
+.footer__go-map:hover {
+  color: #E00822;
 }
 .footer__social-links {
   display: flex;
@@ -612,6 +665,9 @@ body {
   color: #212121;
   color: #FFFFFF;
 }
+.footer__link-nav:hover {
+  color: #E00822;
+}
 .footer__copyright {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -626,4 +682,7 @@ body {
   font-size: 12px;
   line-height: 12px;
   color: #747474;
+}
+.footer__link-copyright:hover {
+  color: #E00822;
 }
