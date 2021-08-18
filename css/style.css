@@ -118,7 +118,7 @@ body {
   color: #E00822;
 }
 .main__start-screen {
-  margin-top: 30px;
+  margin-top: 150px;
 }
 .main__about {
   margin-top: 200px;
@@ -137,7 +137,9 @@ body {
   font-size: 16px;
   line-height: 19px;
   width: 300px;
+  margin-top: 50px;
   margin-left: 300px;
+  margin-bottom: 0;
 }
 .start-screen__btn-video {
   background-color: transparent;
@@ -161,7 +163,8 @@ body {
 }
 .start-screen__tickers {
   overflow: hidden;
-  width: 1200px;
+  width: auto;
+  height: 186px;
   margin-top: 121px;
 }
 .start-screen__popup-video {
@@ -208,42 +211,6 @@ body {
   left: 50%;
   transform: translate(-50%, 0%);
 }
-.test {
-  background-color: #FFFFFF;
-  position: absolute;
-  left: 0;
-  width: 100vw;
-  border-top: 1px solid #212121;
-  border-bottom: 1px solid #212121;
-}
-.text {
-  font-family: 'Neue Machina 800';
-  font-size: 40px;
-  line-height: 39px;
-  text-transform: uppercase;
-  margin-right: 32px;
-}
-.img {
-  margin-right: 32px;
-  height: 37px;
-  display: inline-block;
-}
-.wrap {
-  animation: anim 3s linear infinite;
-  overflow: hidden;
-  width: auto;
-  height: 77px;
-  background-image: url("../img/svg/group149.svg");
-  background-repeat: repeat-x;
-}
-@keyframes anim {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -978px 0;
-  }
-}
 .heading {
   font-family: 'Neue Machina Bold';
   font-size: 85px;
@@ -253,13 +220,64 @@ body {
   padding: 0;
   border: 0;
   display: block;
-  padding-top: 150px;
 }
 .heading__title--top {
   margin-left: 300px;
 }
 .accent {
   color: #E00822;
+}
+.tickers__wrapper {
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  border-top: 1px solid #212121;
+  border-bottom: 1px solid #212121;
+}
+.tickers__wrapper--top {
+  background-color: #E00822;
+  left: 0;
+  top: 805px;
+  border-top: 1px solid #E00822;
+  border-bottom: 1px solid #E00822;
+  transform: rotate(1.39deg);
+}
+.tickers__wrapper--bottom {
+  background-color: #FFFFFF;
+  left: 0;
+  top: 850px;
+  transform: rotate(-1.07deg);
+}
+.tickers__content {
+  width: auto;
+  height: 32px;
+  background-repeat: repeat-x;
+}
+.tickers__content--top {
+  background-image: url("../img/text-tickers-red-test.png");
+  animation: animRightToleft 7s linear infinite;
+}
+.tickers__content--bottom {
+  background-image: url("../img/text-tickers-white-test.png");
+  animation: animLeftToRight 7s linear infinite;
+}
+@keyframes animLeftToRight {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 977px 0;
+  }
+}
+@keyframes animRightToleft {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -977px 0;
+  }
 }
 .about__wrapper-section-title {
   display: flex;
