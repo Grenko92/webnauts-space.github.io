@@ -210,8 +210,9 @@ body {
 }
 .test {
   background-color: #FFFFFF;
-  padding-top: 23px;
-  padding-bottom: 23px;
+  position: absolute;
+  left: 0;
+  width: 100vw;
   border-top: 1px solid #212121;
   border-bottom: 1px solid #212121;
 }
@@ -225,17 +226,22 @@ body {
 .img {
   margin-right: 32px;
   height: 37px;
+  display: inline-block;
 }
 .wrap {
-  animation: anim 10s linear infinite;
-  background-image: url(img/svg/group149);
+  animation: anim 3s linear infinite;
+  overflow: hidden;
+  width: auto;
+  height: 77px;
+  background-image: url("../img/svg/group149.svg");
+  background-repeat: repeat-x;
 }
 @keyframes anim {
-  0% {
-    transform: translateX(0);
+  from {
+    background-position: 0 0;
   }
-  100% {
-    transform: translateX(100%);
+  to {
+    background-position: -978px 0;
   }
 }
 .heading {
