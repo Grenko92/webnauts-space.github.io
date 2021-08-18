@@ -39,6 +39,21 @@ body {
 .hidden {
   display: none;
 }
+.up-link {
+  text-decoration: none;
+  color: #212121;
+  font-family: 'Neue Machina 800';
+  font-size: 40px;
+  line-height: 39px;
+  text-transform: uppercase;
+  position: fixed;
+  z-index: -2;
+  right: 20px;
+  bottom: 50px;
+}
+.up-link:hover {
+  color: #E00822;
+}
 .header__wrapper {
   display: flex;
   justify-content: flex-start;
@@ -182,7 +197,7 @@ body {
   left: 0;
   background-color: #212121;
   opacity: 0.9;
-  z-index: 1;
+  z-index: 1000;
 }
 .start-screen__popup-btn-close {
   background-color: transparent;
@@ -193,7 +208,7 @@ body {
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 2;
+  z-index: 2000;
 }
 .start-screen__popup-img-close {
   width: 13px;
@@ -206,7 +221,7 @@ body {
 .start-screen__popup-videoplayer {
   position: relative;
   margin-right: 100px;
-  z-index: 2;
+  z-index: 2000;
   top: 60px;
   left: 50%;
   transform: translate(-50%, 0%);
@@ -229,6 +244,7 @@ body {
 }
 .tickers__wrapper {
   position: absolute;
+  z-index: -1;
   width: 100vw;
   height: auto;
   padding-top: 23px;
@@ -295,6 +311,12 @@ body {
 }
 .about__description-bottom {
   padding-top: 207px;
+}
+.test {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 0 auto;
 }
 .section-title {
   font-family: 'Neue Machina Bold';
@@ -375,17 +397,23 @@ body {
   margin-left: 75px;
 }
 .service-description__title {
+  margin: 0;
+  padding: 0;
+  border: 0;
   font-family: 'Neue Machina Normal';
   font-size: 30px;
   line-height: 36px;
   font-family: 'Neue Machina Bold';
 }
 .service-description__description {
+  margin: 0;
+  padding: 0;
   font-family: 'Neue Machina Normal';
   font-size: 16px;
   line-height: 19px;
   font-size: 14px;
   line-height: 17px;
+  margin-top: 30px;
 }
 .service-description__service-list {
   padding: 0;
@@ -394,7 +422,7 @@ body {
   text-decoration: none;
   list-style: url("../img/svg/check.svg");
   flex: 1 1 auto;
-  padding-top: 45px;
+  margin-top: 45px;
 }
 .service-description__service-list-item {
   font-family: 'Neue Machina Normal';
