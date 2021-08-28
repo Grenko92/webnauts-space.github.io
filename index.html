@@ -4,7 +4,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
         <link rel="stylesheet" href="css/style.css">
+        
+        <link rel="icon" href="img/favicon.png" type="image/x-icon">
         <title>Webnauts.space</title>
     </head>
     <body>
@@ -19,15 +22,15 @@
                   <path d="M56 71h30M71 56l15 15-15 15" stroke="#E00822" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                 </symbol>
                 <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" id="arrow-right">
-                  <path d="M7 20h26M20 7l13 13-13 13" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M7 20h26M20 7l13 13-13 13"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                 </symbol>
                 <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" id="arrow-right-circle">
                   <path d="M43.5 73C24.998 73 10 58.002 10 39.5 10 20.998 24.998 6 43.5 6 62.002 6 77 20.998 77 39.5 77 58.002 62.002 73 43.5 73z" stroke="#E00822" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                   <path d="M44 26l14 13.5L44 53M30 40h27" stroke="#E00822" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                 </symbol>
                 <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 41" id="arrow-right-circle-learn-more">
-                  <path d="M20.5 37.583c9.435 0 17.084-7.648 17.084-17.083 0-9.435-7.649-17.083-17.084-17.083-9.434 0-17.083 7.648-17.083 17.083 0 9.435 7.649 17.083 17.083 17.083z" stroke="#212121" stroke-linecap="round" stroke-linejoin="round"></path>
-                  <path d="M20.5 27.333l6.833-6.833-6.833-6.833M13.667 20.5h13.667" stroke="#212121" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M20.5 37.583c9.435 0 17.084-7.648 17.084-17.083 0-9.435-7.649-17.083-17.084-17.083-9.434 0-17.083 7.648-17.083 17.083 0 9.435 7.649 17.083 17.083 17.083z"  stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M20.5 27.333l6.833-6.833-6.833-6.833M13.667 20.5h13.667" stroke-linecap="round" stroke-linejoin="round"></path>
                 </symbol>
                 <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 13" id="check">
                   <path d="M17 1L6 12 1 7" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -234,21 +237,18 @@
                 </div>
                 <div class="start-screen__tickers tickers">
                     <div class="tickers__wrapper tickers__wrapper--top ">
-                        <div class="tickers__content tickers__content--top">
-                            
-                        </div>
+                        <div class="tickers__content tickers__content--top"></div>
                     </div>
                     <div class="tickers__wrapper tickers__wrapper--bottom ">
-                        <div class="tickers__content tickers__content--bottom">
-                        </div>
+                        <div class="tickers__content tickers__content--bottom"></div>
                     </div>
                 </div>
             </section>
             <section class="main__about about">
                 <a class="about__anchor" name="about"></a>
                 <div class="main__wrapper wrapper">
-                    <div class="test"></div>
-                    <div class="about__wrapper-section-title">
+                    <!-- <div class="test">1</div> -->
+                    <div class="about__wrapper-section-title animation">
                         <h2 class="about__section-title section-title">
                             О проекте
                         </h2>
@@ -260,9 +260,10 @@
                     <div class="about__slider">                     <!-- Место, зарезервированное под бегущие строки -->
                         <img src="img/image 35.jpg" alt="Photo" width="1020" height="565">
                     </div>
+                    <!-- <div class="test">2</div> -->
                     <div class="about__description-bottom description-bottom">
                         
-                        <p class="description-bottom__text">
+                        <p class="description-bottom__text animation">
                             <img class="description-bottom__decor-elem-1" src="img/svg/decor-elem-1.svg" alt="" width="277" height="46">
                             Мы создаём открытое <br> 
                             пространство, в котором вы <br> 
@@ -277,10 +278,10 @@
             <section class="main__services services">
                 <a class="about__services" name="services"></a>
                 <div class="main__wrapper wrapper">
-                    <h2 class="services__section-title section-title">
+                    <h2 class="services__section-title section-title animation">
                         услуги
                     </h2>
-                    <div class="services__price price">
+                    <div class="services__price price animation">
                         <div class="price__wrapper-service-description">
                             <div class="price__service-description service-description">
                                 <h3 class="service-description__title">
@@ -340,7 +341,9 @@
                             </div>
                             <a class="price__link-booking" href="#">
                                 <span class="price__text-booking">Забронировать</span>
-                                <img class="price__arrow-booking" src="img/svg/arrow-right.svg" alt="" width="40" height="40">
+                                <svg class="price__arrow-booking">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
                             </a>
                         </div>
                         <div class="price__wrapper-service-description">
@@ -375,7 +378,7 @@
                                                 200 ₴
                                             </span>
                                         </div>
-                                        <div class="price-list__time-var">
+                                        <div class="price-lievents-item__costst__time-var">
                                             <span class="price-list__time price-list__time--first">
                                                 /2 часа (только комната)
                                             </span>
@@ -414,7 +417,9 @@
                             </div>
                                 <a class="price__link-booking" href="#">
                                     <span class="price__text-booking">Забронировать</span>
-                                    <img class="price__arrow-booking" src="img/svg/arrow-right.svg" alt="" width="40" height="40">
+                                    <svg class="price__arrow-booking">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg>
                                 </a>
                         </div>
                         <div class="price__wrapper-service-description">
@@ -450,11 +455,12 @@
                             </div>
                             <a class="price__link-booking" href="#">
                                 <span class="price__text-booking">Забронировать</span>
-                                <img class="price__arrow-booking" src="img/svg/arrow-right.svg" alt="" width="40" height="40">
-                            </a>
+                                <svg class="price__arrow-booking">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>                            </a>
                         </div>
                     </div>
-                    <div class="services__benefits benefits">
+                    <div class="services__benefits benefits animation">
                         <h2 class="benefits__section-title section-title">
                             что вы получите
                         </h2>
@@ -521,14 +527,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="services__slider">              <!-- Место, зарезервированное под слайдер -->
-                        <img src="img/gallery.jpg" alt="gallery">
+                    <div class="services__slider">  
+                        <!-- <a class="services__slider--cursor" href="#"> -->
+                            <img src="img/gallery.jpg" alt="gallery">
+                        <!-- </a>            Место, зарезервированное под слайдер -->
                     </div>
                 </div>
             </section>
             <section class="main__events events">
                 <a class="events__anchor" name="events"></a>
-                <div class="main__wrapper wrapper">
+                <div class="main__wrapper wrapper animation">
                     <div class="events__container-top">
                         <h2 class="events__section-title section-title">
                             ивенты
@@ -559,9 +567,13 @@
                                 <p class="events-item__description">
                                     Проблемы развития и роста бизнеса: продукт, маркетинг, продажи, кадры
                                 </p>
-                                <a class="events-item__link-more" href="#">
-                                    Узнать больше
-                                    <img src="img/svg/arrow-right-circle-learn-more.svg" alt="" width="41" height="41">
+                                <a class="events-item__link-more link-more" href="#">
+                                    <span class="link-more__text">
+                                        Узнать больше
+                                    </span>
+                                    <svg class="link-more__icon">
+                                        <use xlink:href="#arrow-right-circle-learn-more"></use>
+                                    </svg>                                
                                 </a>
                             </div>
                             <div class="events-item__cost">
@@ -589,9 +601,13 @@
                                 <p class="events-item__description">
                                     Онлайн-воркшоп: Систематизация бизнеса по-простому! Как выйти из рутины и системно увеличить свою прибыль на +300%?
                                 </p>
-                                <a class="events-item__link-more" href="#">
-                                    Узнать больше
-                                    <img src="img/svg/arrow-right-circle-learn-more.svg" alt="" width="41" height="41">
+                                <a class="events-item__link-more link-more" href="#">
+                                    <span class="link-more__text">
+                                        Узнать больше
+                                    </span>
+                                    <svg class="link-more__icon">
+                                        <use xlink:href="#arrow-right-circle-learn-more"></use>
+                                    </svg>                                
                                 </a>
                             </div>
                             <div class="events-item__cost">
@@ -619,9 +635,13 @@
                                 <p class="events-item__description">
                                     Встреча предпринимателей с Викторией Вирта. Виктория Вирта – профессионал в области создания и вывода на рынок новых продуктов с 15-летним опытом, топ-эксперт Института Развития Интернета
                                 </p>
-                                <a class="events-item__link-more" href="#">
-                                    Узнать больше
-                                    <img src="img/svg/arrow-right-circle-learn-more.svg" alt="" width="41" height="41">
+                                <a class="events-item__link-more link-more" href="#">
+                                    <span class="link-more__text">
+                                        Узнать больше
+                                    </span>
+                                    <svg class="link-more__icon">
+                                        <use xlink:href="#arrow-right-circle-learn-more"></use>
+                                    </svg>                                
                                 </a>
                             </div>
                             <div class="events-item__cost">
@@ -639,7 +659,7 @@
             <section class="main__contacts contacts">
                 <a class="contacts__anchor" name="contacts"></a>
                 <div class="contacts__wrapper wrapper">
-                    <div class="contacts__container">
+                    <div class="contacts__container animation">
                         <h2 class="contacts__section-title section-title">
                             Контакты
                         </h2>
@@ -661,14 +681,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="contacts__map">                 <!-- Место, зарезервированное под карту -->
-                    <img class="contacts__img-map" src="img/map.jpg" alt="Map" width="1600" height="525">
+                <div class="contacts__map">                 
+                    <!-- <img class="contacts__img-map" src="img/map.jpg" alt="Map" width="1600" height="525"> -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21396.929127806165!2d33.3828934!3d47.9051145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40db210dd34431d3%3A0x992bbdcc60e0d715!2zV2VibmF1dHMuU3BhY2UgLSDQutC-0LLQvtGA0LrQuNC90LMsINC40LLQtdC90YLRiywgSVQt0L7RhNC40YHRiw!5e0!3m2!1sru!2sua!4v1629900862765!5m2!1sru!2sua" width="1600" height="525" style="border:0;" allowfullscreen="true" loading="lazy"></iframe>
                 </div>  
             </section>
        </main>
        <footer class="footer">
             <div class="footer__top">
-                <div class="footer__wrapper wrapper">
+                <div class="footer__wrapper wrapper animation">
                     <div class="footer__title-wrapper">
                         <span class="footer__title-top">
                             Оставьте заявку
@@ -676,11 +697,15 @@
                         <span class="footer__title-bottom">
                             Мы готовы обсуждать возможности
                         </span>
-                        <div class="footer__wrapper-recall">
-                            <img class="footer__arrow-recall" src="img/svg/arrow-recall.svg" alt="" width="140" height="140">
-                            <span class="footer__text-recall">
-                                Связаться с нами
-                            </span>
+                        <div class="footer__recall recall">
+                            <a class="recall__link" href="#">
+                                <svg class="recall__arrow">
+                                    <use xlink:href="#arrow-recall"></use>
+                                </svg>
+                                <span class="recall__text animation-recall">
+                                    Связаться с нами
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -740,6 +765,30 @@
                 </a>
             </div>
        </footer>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="img/test/cat1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/test/cat2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/test/cat3.jpg" alt="">
+                </div>
+            </div>
+        
+            <!-- If we need navigation buttons -->
+                <img class="swiper-button-left" src="img/svg/slider-nav-left.svg" alt="">
+            
+                <img class="swiper-button-right" src="img/svg/slider-nav-right.svg" alt="">
+            
+            <div class="swiper-pagination-progressbar"></div>
+        </div>
+       <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
        <script class="script" src="script/script.js"></script>
     </body>
 </html>

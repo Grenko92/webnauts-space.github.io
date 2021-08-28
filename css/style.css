@@ -312,12 +312,6 @@ body {
 .about__description-bottom {
   padding-top: 207px;
 }
-.test {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  margin: 0 auto;
-}
 .section-title {
   font-family: 'Neue Machina Bold';
   font-size: 70px;
@@ -354,6 +348,7 @@ body {
 }
 .services__slider {
   margin-top: 200px;
+  cursor: url("../img/cursor.png"), no-drop;
 }
 .price__service-description {
   width: 380px;
@@ -366,6 +361,7 @@ body {
   flex-direction: column;
   border: 1px solid #212121;
   border-bottom: none;
+  background-color: #FFFFFF;
 }
 .price__service-description:last-child {
   margin-right: 0;
@@ -378,12 +374,17 @@ body {
   width: 380px;
   height: 90px;
   background-color: #E00822;
+  color: #FFFFFF;
+  stroke: #FFFFFF;
 }
 .price__link-booking:hover {
   color: #E00822;
 }
 .price__link-booking:hover {
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #E00822;
+  border: 1px solid #E00822;
+  stroke: #E00822;
 }
 .price__text-booking {
   font-family: 'Neue Machina Bold';
@@ -392,9 +393,13 @@ body {
   font-size: 18px;
   line-height: 17px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: inherit;
   margin-right: 37px;
   margin-left: 75px;
+}
+.price__arrow-booking {
+  width: 40px;
+  height: 40px;
 }
 .service-description__title {
   margin: 0;
@@ -555,7 +560,7 @@ body {
   display: flex;
   align-items: flex-start;
   padding-top: 30px;
-  padding-bottom: 43px;
+  padding-bottom: 33px;
   border-top: 2px solid #747474;
 }
 .events-list__events-item:last-child {
@@ -597,21 +602,23 @@ body {
 }
 .events-item__link-more {
   text-decoration: none;
-  font-family: 'Neue Machina Normal';
-  font-size: 16px;
-  line-height: 15px;
-  text-transform: uppercase;
   color: #212121;
+  display: flex;
+  align-items: center;
+  stroke: #212121;
 }
 .events-item__link-more:hover {
   color: #E00822;
 }
+.events-item__link-more:hover {
+  color: #E00822;
+  stroke: #E00822;
+}
 .events-item__cost {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 1 1 auto;
+  align-self: stretch;
 }
 .events-item__price-tag {
   font-family: 'Neue Machina Bold';
@@ -629,6 +636,17 @@ body {
 }
 .events-item__organizer:hover {
   color: #E00822;
+}
+.link-more__text {
+  font-family: 'Neue Machina Normal';
+  font-size: 16px;
+  line-height: 15px;
+  text-transform: uppercase;
+  padding-right: 7px;
+}
+.link-more__icon {
+  width: 34px;
+  height: 34px;
 }
 .contacts__container {
   display: flex;
@@ -708,25 +726,8 @@ body {
   max-width: 657px;
   margin-bottom: 30px;
 }
-.footer__wrapper-recall {
+.footer__recall {
   position: relative;
-}
-.footer__arrow-recall {
-  margin-left: 587px;
-}
-.footer__text-recall {
-  font-family: 'Neue Machina Normal';
-  font-size: 16px;
-  line-height: 15px;
-  color: #E00822;
-  box-sizing: content-box;
-  max-width: 140px;
-  padding-top: 10px;
-  padding-bottom: 12px;
-  position: absolute;
-  top: 53px;
-  left: 700px;
-  background-color: #212121;
 }
 .footer__bottom {
   display: flex;
@@ -834,4 +835,98 @@ body {
 }
 .footer__link-copyright:hover {
   color: #E00822;
+}
+.recall__arrow {
+  width: 140px;
+  height: 140px;
+  margin-left: 587px;
+}
+.recall__text {
+  font-family: 'Neue Machina Normal';
+  font-size: 16px;
+  line-height: 15px;
+  color: #E00822;
+  box-sizing: content-box;
+  max-width: 140px;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  position: absolute;
+  top: 53px;
+  left: 700px;
+  background-color: #212121;
+}
+.animation-recall--in {
+  animation: animRecallIn 1s ;
+  animation-fill-mode: both;
+}
+.animation-recall--out {
+  animation: animRecallOut 1s ;
+  animation-fill-mode: both;
+}
+@keyframes animRecallIn {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(57px);
+  }
+}
+@keyframes animRecallOut {
+  0% {
+    transform: translateX(57px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.animation {
+  opacity: 0;
+}
+.animation--active {
+  animation: animActive 0.9s;
+  opacity: 1;
+}
+@keyframes animActive {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.swiper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 500px;
+}
+.swiper-slide {
+  z-index: -1;
+}
+.swiper-button-left {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 190px;
+  left: 0;
+  z-index: 2;
+}
+.swiper-button-right {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 190px;
+  left: 1200px;
+  z-index: 2;
+}
+.swiper-pagination-progressbar {
+  z-index: 2;
+  right: 50px !important;
+  bottom: 0;
+  left: unset !important;
+  top: unset !important;
+  width: 960px !important;
+  height: 2px !important;
+  --swiper-theme-color: #E00822;
 }
